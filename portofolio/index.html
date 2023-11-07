@@ -14,7 +14,7 @@
     <div id="header">
       <div class="container">
         <nav>
-          <img src="images/logo.png" classt="logo" />
+          <img src="images/logo.jpg" class="logo" />
           <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -23,10 +23,10 @@
             <li><a href="#">Contact</a></li>
             <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
-          <p>UI/UX Designer</p>
+          <p>Data Analyst</p>
           <h1>Hai, Aku <span>Kens</span><br />Urganis From Informatics UMM</h1>
         </div>
       </div>
@@ -40,7 +40,19 @@
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
-            <p>desc</p>
+            <p>
+              Hai, saya mahasiswi Informatika Universitas Muhammadiyah Malang
+              angkatan 2021. Saya memiliki ketertarikan dalam bidang Data
+              Science, yang merupakan salah satu peminatan di program studi
+              Informatika UMM. Sebagai mahasiswi Informatika, ketertarikan saya
+              dalam dunia Data Science yakni dapat mengenal bagaimana
+              menganalisis data, mengelola data, pemodelan statistik, dan
+              pemahaman mendalam tentang kecerdasan buatan (AI). Di dalam
+              perjalanan pendidikan, saya berharap dapat menerapkan konsep yang
+              saya pelajari ke dalam berbagai aspek kehidupan nyata dan bisnis
+              dengan tujuan menghasilkan wawasan berharga dari ilmu yang ada di
+              dunia IT.
+            </p>
 
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opantab('skills')">
@@ -53,22 +65,23 @@
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX</span><br />Desain Antarmuka</li>
-                <li><span>Web Development</span><br />Web/App Development</li>
                 <li>
-                  <span>App Development</span><br />Building Android/iOS Apps
+                  <span>Visualisasi Data</span><br />Grafik dan Visualisasi Data
+                  Analisis
+                </li>
+                <li><span>Interpretasi Data</span><br />Arti Hasil Analisis</li>
+                <li>
+                  <span>Analisis Data</span><br />Analisis Statistik dan
+                  Matematis Pola Data
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
+                <li><span>2023</span><br />Freelance Remote Pojects.co.id</li>
                 <li>
-                  <span>2021 - Current</span><br />Mahasiswi Informatika
-                  Universitas Muhammadiyah Malang
-                </li>
-                <li>
-                  <span>2019 - 2020</span><br />Dewan Ambalan Pramuka
-                  Purwakirana SMANMT Bojonegoro
+                  <span>2019 - 2020</span><br />Pengurus Harian Dewan Ambalan
+                  Pramuka Purwakirana SMANMT Bojonegoro
                 </li>
                 <li>
                   <span>2019 - 2020</span><br />Anggota Cabang Olahraga Petanque
@@ -99,20 +112,26 @@
         <div class="services-list">
           <div>
             <i class="fas fa-code"></i>
-            <h2>Web Design</h2>
-            <p>desc</p>
+            <h2>Visualisasi Data</h2>
+            <p>
+              Informasi tentang penggunaan grafik, diagram, bahkan elemen visual
+              pada data.
+            </p>
             <a href="#">Learn More</a>
           </div>
           <div>
             <i class="fas fa-crop-alt"></i>
-            <h2>Ui/UX Design</h2>
-            <p>desc</p>
+            <h2>Interpretasi Data</h2>
+            <p>Identifikasi tren data, evaluasi hasil, dan langkah temuan.</p>
             <a href="#">Learn More</a>
           </div>
           <div>
             <i class="fab fa-app-store"></i>
-            <h2>App Design</h2>
-            <p>desc</p>
+            <h2>Analisis Data</h2>
+            <p>
+              Teknik statistik, matematika, dan komputasi untuk mengidentifikasi
+              pola dan pemahaman tentang data.
+            </p>
             <a href="#">Learn More</a>
           </div>
         </div>
@@ -127,7 +146,7 @@
             <img src="images/work-1.jpg" />
             <div class="layer">
               <h3>Social Media App</h3>
-              <p>desc</p>
+              <p>Teknik pemrosesan bahasa alami (NLP).</p>
               <a href="#"><i class="fas fa-external-link-alt"></i></a>
             </div>
           </div>
@@ -136,7 +155,7 @@
               <img src="images/work-2.jpg" />
               <div class="layer">
                 <h3>Music App</h3>
-                <p>desc</p>
+                <p>Identifikasi tren dalam industri musik.</p>
                 <a href="#"><i class="fas fa-external-link-alt"></i></a>
               </div>
             </div>
@@ -145,7 +164,7 @@
                 <img src="images/work-3.jpg" />
                 <div class="layer">
                   <h3>Online Shopping App</h3>
-                  <p>desc</p>
+                  <p>Prediksi persediaan dan update tren pasar.</p>
                   <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
               </div>
@@ -213,12 +232,12 @@
         for (tablink of tablinks) {
           tablink.classList.remove("active-link");
         }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
-      for (tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("activate-link");
-      document.getElementById(tabname).classList.add("activate-tab");
     </script>
     <script>
       var sidemenu = document.getElementById("sidemenu");
